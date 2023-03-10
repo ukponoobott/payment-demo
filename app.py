@@ -16,6 +16,8 @@ items = [
 ]
 
 ref = ""
+url = "https://api.paystack.co/transaction/initialize"
+access_token = "sk_test_8e81c920217c39de48c778ca688c97f23035f86a"
 
 
 # Initialize the transaction using paystack API
@@ -23,9 +25,10 @@ ref = ""
 def pay():
     if request.method == "POST":
         price = float(request.form["price"])
+        params = {"amount": amount, "email": "legendsergio@gmail.com"}
         try:
-            init = tranaction.initialize(email="legendsergio@gmail.com", amount=price, metadata="")
-            ref = init[3]["reference"]
+            res = requests.post(url, headers={'Content-Type':'application/json', 'Authorization': 'Bearer {}'.format(access_token)})
+            ref = res[3]["reference"]
             payment_url = init[3]['authorization_url']
             return redirect(payment_url)
         except Exception as err:
