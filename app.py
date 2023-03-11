@@ -9,9 +9,9 @@ def index():
 
 
 items = [
-    {"name": "shoe", "price": 100000},
+    {"name": "shoe", "price": 50000},
     {"name": "earphone", "price": 40000},
-    {"name": "watch", "price": 500000}
+    {"name": "watch", "price": 15000}
 ]
 
 ref = ""
@@ -28,7 +28,7 @@ def pay():
         params = {}
         print(params)
         try:
-            res = requests.post(url, data={"amount": price, "email": "legendsergio@gmail.com"}, headers={'Authorization': 'Bearer {}'.format(access_token)})
+            res = requests.post(url, data={"amount": price * 100 , "email": "legendsergio@gmail.com"}, headers={'Authorization': 'Bearer {}'.format(access_token)})
             print(res.json())
             # ref = res[3]["reference"]
             res_data = res.json()
