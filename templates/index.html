@@ -123,7 +123,7 @@
         <img src="{{ url_for('static', filename='shoes.png')}}">
         <h3>Shoes</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <h6>$100.00</h6>
+        <h6>N {{ items[0]["price"] }}</h6>
         <ul>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -142,7 +142,7 @@
         <img src="{{ url_for('static', filename='earphone.png')}}">
         <h3>Earphone</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <h6>$40.00</h6>
+        <h6>N {{ items[1]["price"] }}</h6>
         <ul>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -161,7 +161,7 @@
         <img src="{{ url_for('static', filename='watch.png')}}">
         <h3>Watch</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <h6>$ {{ items[2]["price"] }}</h6>
+        <h6>N {{ items[2]["price"] }}</h6>
         <ul>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
