@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Responsive Ecommerce Product Cards In HTML/CSS</title>
+    <title>Knixat Shop</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
@@ -118,12 +118,14 @@
     </style>
   </head>
   <body>
+
+    <h1 style="text-align: center;">Welcome to Knixat Ecommerce Demo</h1>
     <div class="gallery">
       <div class="content">
         <img src="{{ url_for('static', filename='shoes.png')}}">
         <h3>Shoes</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <h6>$100.00</h6>
+        <h6>N {{ items[0]["price"] }}</h6>
         <ul>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -133,7 +135,7 @@
         </ul>
 
         <form action="{{ url_for('pay')}}" method="post">
-          <input type="number" name="price" value="{{ items[2]['price']}}" hidden>
+          <input type="number" name="price" value="{{ items[0]['price']}}" hidden>
           <button class="buy-1" type="submit">Buy Now</button>
         </form>
         <!-- <button class="buy-1">Buy Now</button> -->
@@ -142,7 +144,7 @@
         <img src="{{ url_for('static', filename='earphone.png')}}">
         <h3>Earphone</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <h6>$40.00</h6>
+        <h6>N {{ items[1]["price"] }}</h6>
         <ul>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -161,7 +163,7 @@
         <img src="{{ url_for('static', filename='watch.png')}}">
         <h3>Watch</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <h6>$ {{ items[2]["price"] }}</h6>
+        <h6>N {{ items[2]["price"] }}</h6>
         <ul>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
