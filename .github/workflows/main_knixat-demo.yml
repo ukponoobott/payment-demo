@@ -64,4 +64,4 @@ jobs:
         with:
           app-name: 'knixat-demo'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_322CC1FE04A242959C7893BCDE9DE5FF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C7EDF5C4F4E44EBBB5E9CCF16AB08C83 }}
